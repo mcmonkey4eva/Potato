@@ -22,9 +22,9 @@ public class Potato implements Tuber {
     }
 
     public void prepare() throws NotDeliciousException {
-        this.addCondiments("sour cream", "chives", "butter", "crumbled bacon", "grated cheese", "ketchup", "salt", "tabasco");
+        this.addCondiments("sour cream", "chives", "butter", "crumbled bacon", "grated cheese", "ketchup", "salt", "tabasco", "pepper");
         this.listCondiments();
-        if(!this.isDelicious()) throw NotDeliciousException();
+        if(!this.isDelicious()) throw new NotDeliciousException();
     }
 
     public void addCondiments(String... names) {
